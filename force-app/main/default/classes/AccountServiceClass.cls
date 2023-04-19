@@ -5,7 +5,7 @@ public with sharing class AccountServiceClass {
         List<Account> updateAccountList= new List<Account>();
         for(Account acc :[Select id,Name from Account WITH SECURITY_ENFORCED limit 5]){
             if(acc.Name.contains('acc')){
-                newAccount= new Account(id=acc.Id,Name=acc.Name+'sovrn'+i);
+                newAccount= new Account(id=acc.Id,Name=acc.Name+'Sovrn'+i);
                 updateAccountList.add(newAccount);
             }
         }
